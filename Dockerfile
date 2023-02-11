@@ -3,7 +3,6 @@ FROM alpine:3.17
 ENV MUNIN_VERSION="2.999.16"
 
 EXPOSE 4948
-VOLUME /var/lib/munin
 
 ENTRYPOINT ["munin-httpd"]
 CMD ["--listen", "0.0.0.0:4948"]
@@ -59,3 +58,4 @@ RUN set -ex && \
 USER munin
 
 WORKDIR /var/lib/munin
+VOLUME /var/lib/munin
