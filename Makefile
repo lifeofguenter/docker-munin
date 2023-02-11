@@ -30,7 +30,6 @@ all:
 
 .PHONY: build
 build:
-	printenv
 	@echo -e "🔨👷 $(bold)Building$(norm) 👷🔨"
 
 	docker build \
@@ -41,7 +40,7 @@ build:
 
 .PHONY: test
 test:
-	docker run --rm '$(REPO_NAME)' --version
+	docker run --rm --entrypoint munin-update '$(REPO_NAME)' --version
 
 
 .PHONY: publish

@@ -12,7 +12,7 @@ on:
 
 env:
   TERM: xterm-256color
-  REPO_NAME: 9jkh/certbot-dns
+  REPO_NAME: lifeofguenter/munin
 
 jobs:
   build-and-publish:
