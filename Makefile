@@ -30,6 +30,7 @@ all:
 
 .PHONY: build
 build:
+	printenv
 	@echo -e "🔨👷 $(bold)Building$(norm) 👷🔨"
 
 	docker build \
